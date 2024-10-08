@@ -1,0 +1,70 @@
+{
+  "cars": [
+    {
+      "brand": "Honda",
+      "models": [
+        {
+          "name": "Civic",
+          "details": {
+            "year": 2024,
+            "engine": "1.5L Turbocharged I4",
+            "horsepower": 180,
+            "transmission": "CVT",
+            "fuelEconomy": {
+              "city": "32 mpg",
+              "highway": "42 mpg"
+            },
+            "features": [
+              "Apple CarPlay",
+              "Android Auto",
+              "Adaptive Cruise Control",
+              "Lane Keeping Assist",
+              "Backup Camera"
+            ],
+            "availableColors": [
+              "Crystal Black Pearl",
+              "Lunar Silver Metallic",
+              "Rallye Red",
+              "Sonic Gray Pearl",
+              "Aegean Blue Metallic"
+            ]
+          }
+        },
+        {
+          "name": "Accord"
+        },
+        {
+          "name": "CR-V"
+        }
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "models": [
+        {
+          "name": "Camry"
+        },
+        {
+          "name": "Corolla"
+        },
+        {
+          "name": "RAV4"
+        }
+      ]
+    },
+    {
+      "brand": "Ford",
+      "models": [
+        {
+          "name": "Mustang"
+        },
+        {
+          "name": "F-150"
+        },
+        {
+          "name": "Explorer"
+        }
+      ]
+    }
+  ]
+}

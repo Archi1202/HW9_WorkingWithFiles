@@ -75,8 +75,8 @@ public class ZipFilesTests {
             List<String[]> csvCustomer = csvFile.readAll();
             assertThat(csvCustomer.getFirst())
                         .containsExactlyInAnyOrder(
-                                new String[]{"Subscription Date","Website","Index","Customer Id","Last Name","Company","City","First Name","Country","Phone 1","Phone 2","Email"});
-
+                                "Subscription Date","Website","Index","Customer Id",
+                                "Last Name","Company","City","First Name","Country","Phone 1","Phone 2","Email");
             assertThat(csvCustomer.get(3)).contains("http://www.lawrence.com/","+1-539-402-0259");
             assertThat(csvCustomer.get(49)).hasSize(12);
         }
