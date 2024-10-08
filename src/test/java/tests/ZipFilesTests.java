@@ -28,14 +28,14 @@ public class ZipFilesTests {
             ZipEntry entry;
 
             while ((entry = zipFile.getNextEntry()) != null) {
-                if (entry.getName().contains("Washington")) {
+                if (entry.getName().contains("Eurasian")) {
                     pdfFile = new PDF(zipFile);
                     break;
                 }
             }
 
-            assertThat(pdfFile.text).contains("admissions.wustl.edu");
-            assertThat(pdfFile.numberOfPages).isEqualTo(7);
+            assertThat(pdfFile.text).contains("edu.enu.kz");
+            assertThat(pdfFile.numberOfPages).isEqualTo(40);
         }
     }
     @Test
