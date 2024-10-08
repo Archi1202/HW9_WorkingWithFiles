@@ -14,7 +14,7 @@ public class JsonCarsTests {
     private ClassLoader cl = JsonCarsTests.class.getClassLoader();
 
     @Test
-    @DisplayName("Test to verify Cars.json file data")
+    @DisplayName("Test to verify Cars.json file data and detailed information about Honda Civic")
     void jsonFileTest() throws Exception {
         try (Reader reader = new InputStreamReader(
                 cl.getResourceAsStream("Cars.json")
@@ -25,7 +25,7 @@ public class JsonCarsTests {
             assertThat(cars.getCars().get(1).getBrand()).isEqualTo("Toyota");
             assertThat(cars.getCars().get(0).getModels()).extracting("name").contains("Accord");
             assertThat(cars.getCars().get(2).getBrand()).startsWith("F");
-            Cars.Car honda = cars.getCars().get(0); // Honda brand
+            Cars.Car honda = cars.getCars().get(0);
             Cars.Car.Model hondaCivic = honda.getModels().stream()
                     .filter(model -> model.getName().equals("Civic"))
                     .findFirst()
@@ -38,6 +38,8 @@ public class JsonCarsTests {
             assertThat(hondaCivic.getDetails().getFuelEconomy().getHighway()).isEqualTo("42 mpg");
             assertThat(hondaCivic.getDetails().getFeatures())
                     .containsAnyOf("Apple CarPlay", "Lane Keeping Assist");
+            assertThat(hondaCivic.getDetails().getAvailableColors())
+                    .contains("Crystal Black Pearl", "Rallye Red");
         }
     }
 }
