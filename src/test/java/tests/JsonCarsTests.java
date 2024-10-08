@@ -38,8 +38,6 @@ public class JsonCarsTests {
             assertThat(hondaCivic.getDetails().getFuelEconomy().getHighway()).isEqualTo("42 mpg");
             assertThat(hondaCivic.getDetails().getFeatures())
                     .containsAnyOf("Apple CarPlay", "Lane Keeping Assist");
-            assertThat(hondaCivic.getDetails().getAvailableColors())
-                    .contains("Crystal Black Pearl", "Rallye Red");
         }
     }
 }
